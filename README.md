@@ -10,3 +10,6 @@ Learning
 
 Project inspired by the Odin's Project, by DylanTHK
 https://www.theodinproject.com/lessons/node-path-javascript-restaurant-page
+
+Source of Inspiration:
+https://www.bemorekaren.com/
