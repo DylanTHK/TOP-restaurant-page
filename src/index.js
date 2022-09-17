@@ -13,18 +13,22 @@ function createHeaders() {
 
 function createNavBar() {
     const navBar = document.createElement("header");
+    
     const homeTab = document.createElement("div");
-    const menuTab = document.createElement("div");
-    const contactTab = document.createElement("div");
-
     homeTab.textContent = "Home";
-    menuTab.textContent = "Menu";
-    contactTab.textContent = "Contact";
-
     homeTab.classList.add("header-tabs", "active");
+    homeTab.addEventListener("click", () => createHomePage());
+    
+    const menuTab = document.createElement("div");
+    menuTab.textContent = "Menu";
     menuTab.classList.add("header-tabs");
+    menuTab.addEventListener("click", () => console.log("Initialise menu-Tab"));
+    
+    const contactTab = document.createElement("div");
+    contactTab.textContent = "Contact";
     contactTab.classList.add("header-tabs");
-
+    contactTab.addEventListener("click", () => console.log("Initialise Contact Tab"));
+    
     navBar.append(homeTab, menuTab, contactTab);
 
     return navBar;
@@ -71,17 +75,5 @@ function initialisePage() {
 
 initialisePage();
 
-// event listeners to call relevant modules
-// headerButtons.forEach(button => {
-//     button.addEventListener("click", () => {
-//         const content = button.textContent;
-//         if (content === "Home") {
-//             createHomePage();
-//         } else if (content === "Menu") {
-//             createMenuPage();
-//         } else {
-//             createContactPage();
-//         }
-//     })
-// })
+
 
