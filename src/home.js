@@ -1,45 +1,18 @@
 export default function createHomePage() {
-    // items required to assist in creating contents
-    const imageAttributes = {
-        id: "karen-icon",
-        src: "/src/images/karen.png",
-        alt: "Karen Emoji"
-    };
-    const mottoList = ["Our Motto", 
-                    "Great Burgers & Rude Service", 
-                    "Get Ready to live out your", 
-                    "Karen Dreams"];
-    const opsList = ["Operating Hours", "Yes"];
-    
-    // header content
-    const content = document.querySelector("#content");
-    const cafeName = document.createElement("h1");
-    const header = document.createElement("header");
-    const homeTab = document.createElement("div");
-    const menuTab = document.createElement("div");
-    const contactTab = document.createElement("div");
-    
-    cafeName.textContent = "Karen's Kafe";
-    homeTab.textContent = "Home";
-    menuTab.textContent = "Menu";
-    contactTab.textContent = "Contact";
+    const mainContent = document.querySelector(".main-content");
+    mainContent.textContent = "";
 
-    homeTab.classList.add("header-tabs", "active");
-    menuTab.classList.add("header-tabs");
-    contactTab.classList.add("header-tabs");
-
-    header.append(homeTab, menuTab, contactTab);
-
-    // main content 
-    const mainContent = document.createElement("div");
     const logoImage = document.createElement("img");
+    logoImage.id = "karen-icon";
+    logoImage.src = "/src/images/karen.png";
+    logoImage.alt = "Karen Emoji";
+    
+    // creating Motto Section
     const mottoSection = document.createElement("div");
-    const operatingSection = document.createElement("div");
-
-    Object.keys(imageAttributes).forEach(attribute => {
-        logoImage.setAttribute(attribute, imageAttributes[attribute]);
-    });
-    mainContent.classList.add("main-content");
+    const mottoList = [ "Our Motto",
+                    "Great Burgers & Rude Service",
+                    "Get Ready to live out your",
+                    "Karen Dreams"];
     mottoSection.classList.add("motto", "sections");
     mottoList.forEach(motto => {
         const para = document.createElement("p");
@@ -49,6 +22,10 @@ export default function createHomePage() {
         para.textContent = motto;
         mottoSection.append(para);
     })
+
+    // creating Operating Hours Section
+    const operatingSection = document.createElement("div");
+    const opsList = ["Operating Hours", "Yes"];
     operatingSection.classList.add("ops-hours", "sections");
     opsList.forEach(ops => {
         const para = document.createElement("p");
@@ -60,6 +37,5 @@ export default function createHomePage() {
     })
 
     // appending HTML elements to content
-    content.append(cafeName, header, mainContent);
     mainContent.append(logoImage, mottoSection, operatingSection);
 }
