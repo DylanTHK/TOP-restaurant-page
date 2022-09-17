@@ -22,12 +22,12 @@ function createNavBar() {
     const menuTab = document.createElement("div");
     menuTab.textContent = "Menu";
     menuTab.classList.add("header-tabs");
-    menuTab.addEventListener("click", () => console.log("Initialise menu-Tab"));
+    menuTab.addEventListener("click", () => createMenuPage());
     
     const contactTab = document.createElement("div");
     contactTab.textContent = "Contact";
     contactTab.classList.add("header-tabs");
-    contactTab.addEventListener("click", () => console.log("Initialise Contact Tab"));
+    contactTab.addEventListener("click", () => createContactPage());
     
     navBar.append(homeTab, menuTab, contactTab);
 
@@ -70,7 +70,9 @@ function initialisePage() {
     const footer = createFooter();
 
     content.append(header, nav, mainContent, footer);
-    createHomePage();
+    // createHomePage();
+    // createMenuPage();
+    createContactPage();
 }
 
 initialisePage();

@@ -106,8 +106,12 @@ img#karen-icon {
 }
 
 .fa-brands,
-.fa-regular {
+.fa-solid {
     padding-right: 1rem;
+}
+
+.fa-instagram {
+    transform: scale(1.5);
 }
 
 .map {

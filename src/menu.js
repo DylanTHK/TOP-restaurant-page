@@ -1,6 +1,5 @@
 function createMenuPage() {
-    
-    // reset main content (TBC)
+    // reset main content
     const mainContent = document.querySelector(".main-content");
     mainContent.textContent = "";
     
