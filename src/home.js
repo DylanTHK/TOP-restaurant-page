@@ -4,7 +4,7 @@ export default function createHomePage() {
 
     const logoImage = document.createElement("img");
     logoImage.id = "karen-icon";
-    logoImage.src = "../src/images/karen.png";
+    logoImage.src = "images/karen.png";
     logoImage.alt = "Karen Emoji";
     
     // creating Motto Section
