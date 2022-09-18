@@ -17,17 +17,29 @@ function createNavBar() {
     const homeTab = document.createElement("div");
     homeTab.textContent = "Home";
     homeTab.classList.add("header-tabs", "active");
-    homeTab.addEventListener("click", () => createHomePage());
+    homeTab.addEventListener("click", (e) => {
+        if(e.target.classList.contains("active")) return;
+        setActiveStatus(e.target);
+        createHomePage();
+    });
     
     const menuTab = document.createElement("div");
     menuTab.textContent = "Menu";
     menuTab.classList.add("header-tabs");
-    menuTab.addEventListener("click", () => createMenuPage());
+    menuTab.addEventListener("click", (e) => {
+        if(e.target.classList.contains("active")) return;
+        setActiveStatus(e.target);
+        createMenuPage();
+    });
     
     const contactTab = document.createElement("div");
     contactTab.textContent = "Contact";
     contactTab.classList.add("header-tabs");
-    contactTab.addEventListener("click", () => createContactPage());
+    contactTab.addEventListener("click", (e) => {
+        if(e.target.classList.contains("active")) return;
+        setActiveStatus(e.target);
+        createContactPage();
+    });
     
     navBar.append(homeTab, menuTab, contactTab);
 
@@ -38,6 +50,18 @@ function createMainContent() {
     const mainContent = document.createElement("div");
     mainContent.classList.add("main-content");
     return mainContent
+}
+
+function setActiveStatus(tab) {
+    const headerTabs = document.querySelectorAll(".header-tabs");
+
+    headerTabs.forEach(header => {
+        if(header !== tab) {
+            header.classList.remove("active");
+        }
+    });
+
+    tab.classList.add("active")
 }
 
 function createFooter() {
@@ -70,9 +94,7 @@ function initialisePage() {
     const footer = createFooter();
 
     content.append(header, nav, mainContent, footer);
-    // createHomePage();
-    // createMenuPage();
-    createContactPage();
+    createHomePage();
 }
 
 initialisePage();

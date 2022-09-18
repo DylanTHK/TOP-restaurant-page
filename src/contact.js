@@ -23,6 +23,7 @@ function createContactPage() {
     phoneLink.append(phoneLogo, phoneText);
 
     const mapLink = document.createElement("a");
+    mapLink.classList.add("links", "map");
     mapLink.textContent = "Having trouble with google maps in 2022?";
     const mapImage = document.createElement("img");
     mapImage.src = "/src/images/karen-location.png";
