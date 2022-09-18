@@ -26,7 +26,7 @@ function createContactPage() {
     mapLink.classList.add("links", "map");
     mapLink.textContent = "Having trouble with google maps in 2022?";
     const mapImage = document.createElement("img");
-    mapImage.src = "images/karen-location.png";
+    mapImage.src = "./src/images/karen-location.png";
     mapImage.alt = "Google Maps Location";
     mapImage.classList.add("map-image");
     mapLink.appendChild(mapImage);
