@@ -3,6 +3,7 @@ Dynamic page using JS and webpack
 
 Purpose
 - include webpack in frontend development process
+- Learn to work with importing and exporting modules
 
 Learning
 - npm init (package.json)
@@ -11,7 +12,6 @@ Learning
 - specify locations for loading modules, entry point, output, devtools, mode etc (blueprints for scripts)
 - main.js (final compiled files with all imported files from index.js(entry))
 - creating entire pages with javascript
-
 
 Project inspired by the Odin's Project, by DylanTHK
 https://www.theodinproject.com/lessons/node-path-javascript-restaurant-page
